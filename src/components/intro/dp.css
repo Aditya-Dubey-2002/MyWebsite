@@ -1,0 +1,16 @@
+.dp {
+    position: relative;
+    left:30%;
+    top:5%;
+    width: 30%;
+    perspective: 1000px;
+  }
+  .avatar {
+    width: 100%;
+    height: 100%;
+    border:2.5px black solid;
+    transition: transform 0.8s ease-in-out;
+  }
+  .dp:hover .avatar {
+    transform: rotateY(360deg);
+  }

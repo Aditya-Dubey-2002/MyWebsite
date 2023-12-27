@@ -1,0 +1,32 @@
+/* YourNavBar.css */
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    /* padding:2%; */
+    height: 50px; /* Adjust the height as needed */
+    /* background-color: #333; Adjust the background color as needed */
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+    color: #fff; /* Adjust the text color as needed */
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff; /* Adjust the text color as needed */
+  }
+  
+  /* Add additional styles as needed */
+  
