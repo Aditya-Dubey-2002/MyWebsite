@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Masonry from '@mui/lab/Masonry';
 import MasonCard from './mason-card';
@@ -7,59 +7,63 @@ import Dp from './intro/dp';
 import LoadingSpinner from './loader';
 
 const cardData = [
-    {
-      bgcolor: '#3D30A2',
-      color: 'white',
-      component: <Dp />,
-      title: 'Aditya Dubey',
-      extraComp: true,
-    },
-    {
-      bgcolor: '#B15EFF',
-      color: 'white',
-      title: 'Education',
-      etitle: 'Wanna know where I studied',
-      hint: 'Know my academia',
-      path: '/education',
-    },
-    {
-      bgcolor: '#FFA33C',
-      color: 'white',
-      title: 'Skills',
-      etitle: 'A never ending list though',
-      hint: 'Arrows in my quiver',
-      path: '/skills',
-    },
-    {
-      bgcolor: '#FFFB73',
-      color: '#141E46',
-      title: 'Projects',
-      etitle: "Paintings of this little 'Picasso'",
-      hint: "That's the mark",
-      path: '/projects',
-    },
-    {
-      bgcolor: '#3D30A2',
-      color: 'white',
-      title: 'Blog',
-      etitle: 'Thoughts I wander around',
-      hint: 'I write sometimes',
-      path: '/blog',
-    },
-    {
-      bgcolor: '#B15EFF',
-      color: 'white',
-      title: 'Contact Me',
-      etitle: "Let's Connect",
-      hint: "Don't you wanna connect",
-      path: '/contact-me',
-    },
-  ];
+  {
+    bgcolor: '#3D30A2',
+    color: 'white',
+    component: <Dp size={130}/>,
+    title: 'Aditya Dubey',
+    extraComp: true,
+    // videoSrc:videosrc
+  },
+  {
+    bgcolor: '#B15EFF',
+    color: 'white',
+    title: 'About',
+    etitle: 'Wanna know where I studied',
+    hint: 'Know my academia',
+    path: '/about',
+  },
+  {
+    bgcolor: '#FFFB73',
+    color: '#141E46',
+    title: 'Projects',
+    etitle: "Paintings of this little 'Picasso'",
+    hint: "That's the mark",
+    path: '/projects',
+  },
+  {
+    bgcolor: '#FFA33C',
+    color: 'white',
+    title: 'Skills',
+    etitle: 'A never ending list though',
+    hint: 'Arrows in my quiver',
+    path: '/skills',
+  },
+  {
+    bgcolor: '#3D30A2',
+    color: 'white',
+    title: 'Blog',
+    etitle: 'Thoughts I wander around',
+    hint: 'I write sometimes',
+    path: '/blog',
+  },
+  {
+    bgcolor: '#B15EFF',
+    color: 'white',
+    title: 'Contact Me',
+    etitle: "Let's Connect",
+    hint: "Don't you wanna connect",
+    path: '/contact-me',
+  },
+];
 
 
 function Massonary() {
   const mystyle = {
-    // margin: '2.5%',
+    marginLeft: '0.5%',
+    marginTop: '2%',
+    justifyItems :"center",
+    alignItem:"center"
   };
   const [loading, setLoading] = useState(true);
 
@@ -74,14 +78,18 @@ function Massonary() {
         fetchData();
     }, []);
 
-  return (loading?LoadingSpinner:
-    <Box sx={{ width: '96%', height:'100%'}} style={mystyle} className="main-box">
+  return (
+    loading?LoadingSpinner:
+    <Box sx={{ width: '100%', height: '100%' }} style={mystyle} className="main-box">
       <Masonry columns={{ xs: 2, sm: 3 }} spacing={2}>
+      {/* <MasonCard bgcolor="blue"/> */}
         {cardData.map((card, index) => (
           <MasonCard key={index} {...card} />
         ))}
       </Masonry>
+      {/* <>Yo Yo Honey Singh</> */}
     </Box>
+
   );
 }
 

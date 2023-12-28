@@ -1,0 +1,5 @@
+.a-body {
+    white-space: nowrap;
+    position: absolute;
+    animation: scrollText 10s linear infinite;
+}

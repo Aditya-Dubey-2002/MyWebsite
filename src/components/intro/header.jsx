@@ -8,7 +8,7 @@ function Header() {
     
     return (
         <header className="intro">
-            <Dp size={150}/>
+            <Dp size={130}/>
             <Brief />
         </header>
     )

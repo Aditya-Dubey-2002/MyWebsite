@@ -7,7 +7,7 @@ function Dp(props) {
     const sizes = { width: (props.size), height: (props.size) };
     return (
         <div className="dp">
-            <Avatar alt="Aditya Dubey" src={img} sx={{ width: 130, height: 130 }} className="avatar" />
+            <Avatar alt="Aditya Dubey" src={img} sx={sizes} className="avatar" />
         </div>
     )
 }

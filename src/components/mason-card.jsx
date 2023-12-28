@@ -10,17 +10,20 @@ function MasonCard(props) {
         color: props.color,
         borderRadius: "2.5%",
         textAlign: "left",
-        // padding: "3px",
+        padding: "3%",
         display: "flex",
         flexDirection: 'column',
-        minHeight: "47%",
+        minHeight: "46%",
         position: "relative",
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+        transition: "box-shadow 0.3s ease-out", 
         // Added to make absolute positioning work
     };
 
 
     const titleStyle = {
         fontSize: "1.5em",
+        
         // maxHeight:"100%"
     }
 
@@ -56,24 +59,20 @@ function MasonCard(props) {
     function itsOver(e) {
         setTitle(props.etitle);
         setHint("View");
+        e.currentTarget.classList.add("hovered");
     }
-
-    function itsOut() {
+    
+    function itsOut(e) {
         setTitle("");
         setHint(props.hint);
+        e.currentTarget.classList.remove("hovered");
     }
 
 
     return (
-        <div style={myStyle} onMouseOver={itsOver} onMouseOut={itsOut}>
+        <paper elevation={20} style={myStyle} onMouseOver={itsOver} onMouseOut={itsOut}>
             <NavLink to={props.path} style={LinkStyle}>
-                <video
-                    src={props.videoSrc} // Replace with the actual video source
-                    style={videoStyle}
-                    autoPlay
-                    loop
-                    muted
-                />
+                 
                 {props.component}
                 <div style={textContainerStyle} >
                     <h4 style={titleStyle}>{props.title}</h4>
@@ -84,7 +83,7 @@ function MasonCard(props) {
             </NavLink>
             {/* Your existing component or image */}
             {/* <img src={props.imgsrc} style={imgStyle}></img> */}
-        </div>
+        </paper>
 
     );
 }
