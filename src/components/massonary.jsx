@@ -53,7 +53,7 @@ const cardData = [
     title: 'Contact Me',
     etitle: "Let's Connect",
     hint: "Don't you wanna connect",
-    path: '/contact-me',
+    path: '/contact',
   },
 ];
 
@@ -61,9 +61,10 @@ const cardData = [
 function Massonary() {
   const mystyle = {
     marginLeft: '0.5%',
-    marginTop: '2%',
+    marginTop: '5vh',
     justifyItems :"center",
-    alignItem:"center"
+    alignItem:"center",
+    height:"95vh"
   };
   const [loading, setLoading] = useState(true);
 
@@ -80,7 +81,7 @@ function Massonary() {
 
   return (
     loading?LoadingSpinner:
-    <Box sx={{ width: '100%', height: '100%' }} style={mystyle} className="main-box">
+    <Box sx={{ width: '100%', }} style={mystyle} className="main-box">
       <Masonry columns={{ xs: 2, sm: 3 }} spacing={2}>
       {/* <MasonCard bgcolor="blue"/> */}
         {cardData.map((card, index) => (

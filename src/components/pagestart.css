@@ -1,0 +1,28 @@
+
+
+.start-head {
+    /* width:50%; */
+    /* margin-top: 150px; */
+    margin-bottom: 2px;
+    font-size: 3.5em;
+}
+
+.start-subhead {
+    /* margin-top: 2px; */
+    /* text-align: right; */
+    /* width:70%; */
+}
+
+.page-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* Adjust the height based on your design */
+}
+
+.page-start {
+    width: 70%;
+    max-width: 800px;
+    /* Optional: Set a maximum width to avoid overly wide content on large screens */
+}

@@ -4,7 +4,7 @@ import Dp from "./intro/dp";
 function SmallIntro(){
     return (
         <div className="intro-box">
-            <Dp size={30}/>
+            <p><b>Aditya Dubey</b></p>
         </div>
     )
 }

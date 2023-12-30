@@ -22,7 +22,7 @@ function MasonCard(props) {
 
 
     const titleStyle = {
-        fontSize: "1.5em",
+        fontSize: "1.25em",
         
         // maxHeight:"100%"
     }
@@ -33,6 +33,7 @@ function MasonCard(props) {
         left: '5px',
         transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease", // Add transform and background-color
         margin: 0,
+        width:"50%"
         // textShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)'
     };
 
@@ -75,10 +76,10 @@ function MasonCard(props) {
                  
                 {props.component}
                 <div style={textContainerStyle} >
-                    <h4 style={titleStyle}>{props.title}</h4>
-                    <h2>{title}</h2>
+                    <h4 style={titleStyle} className="heading">{props.title}</h4>
+                    <h2 className="ehead"><b>{title}</b></h2>
                     <hr />
-                    <p>{hint}</p>
+                    <p className="subheading">{hint}</p>
                 </div>
             </NavLink>
             {/* Your existing component or image */}

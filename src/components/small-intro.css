@@ -1,5 +1,4 @@
 .intro-box{
-    background-color: white;
-    color: black;
-    
+    border: 2px solid red;
+    padding: 0.5%;
 }

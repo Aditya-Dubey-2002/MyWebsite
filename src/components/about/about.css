@@ -3,3 +3,7 @@
     position: absolute;
     animation: scrollText 10s linear infinite;
 }
+
+.about-box{
+    align-items: center;
+}

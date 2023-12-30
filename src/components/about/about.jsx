@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import { Button, CardActionArea, CardActions, Container } from '@mui/material';
 import DrawerAppBar from "../nav-bar";
 import AboutBody from "./about-body";
+import Footer from "../Footer";
+import { Paper } from "@mui/material";
 
 function About(props) {
     const [over, setOver] = useState(false);
@@ -36,10 +38,14 @@ function About(props) {
         position: "relative"
     }
     return (
-        <div style={mainBx}>
-            <DrawerAppBar bgcolor={props.bgcolor} />
-            <AboutBody className="a-body" />
-        </div>
+        <>
+            <Paper elevation={5} style={mainBx}>
+                <DrawerAppBar bgcolor={props.bgcolor} />
+                <AboutBody className="a-body" />
+            </Paper>
+            <Footer/>
+        </>
+
 
         // <Box onMouseOver={onOver} onMouseOut={onOut}>
 
