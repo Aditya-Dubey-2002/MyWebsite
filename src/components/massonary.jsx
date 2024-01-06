@@ -5,6 +5,7 @@ import Masonry from '@mui/lab/Masonry';
 import MasonCard from './mason-card';
 import Dp from './intro/dp';
 import LoadingSpinner from './loader';
+import bike from "./static/images/motorbike.png";
 
 const cardData = [
   {
@@ -19,20 +20,21 @@ const cardData = [
     bgcolor: '#B15EFF',
     color: 'white',
     title: 'About',
+    isrc : bike,
     etitle: 'Wanna know where I studied',
     hint: 'Know my academia',
     path: '/about',
   },
   {
-    bgcolor: '#FFFB73',
-    color: '#141E46',
+    bgcolor: '#BF3131',
+    color: 'white',
     title: 'Projects',
     etitle: "Paintings of this little 'Picasso'",
     hint: "That's the mark",
     path: '/projects',
   },
   {
-    bgcolor: '#FFA33C',
+    bgcolor: '#65B741',
     color: 'white',
     title: 'Skills',
     etitle: 'A never ending list though',
@@ -64,7 +66,7 @@ function Massonary() {
     marginTop: '5vh',
     justifyItems :"center",
     alignItem:"center",
-    height:"95vh"
+    // height:"95vh"
   };
   const [loading, setLoading] = useState(true);
 
@@ -82,7 +84,7 @@ function Massonary() {
   return (
     loading?LoadingSpinner:
     <Box sx={{ width: '100%', }} style={mystyle} className="main-box">
-      <Masonry columns={{ xs: 2, sm: 3 }} spacing={2}>
+      <Masonry columns={{ xs: 1, sm: 3 }} spacing={2}>
       {/* <MasonCard bgcolor="blue"/> */}
         {cardData.map((card, index) => (
           <MasonCard key={index} {...card} />

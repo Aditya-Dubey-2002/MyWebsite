@@ -23,7 +23,7 @@ const ContactForm = () => {
           <Typography variant="h5" gutterBottom>
             Contact Me
           </Typography>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} target='_blank' action="https://formsubmit.co/dubey02.adity@gmail.com" method="POST">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField

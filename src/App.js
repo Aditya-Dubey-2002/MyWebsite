@@ -30,8 +30,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Massonary />} />
         <Route path="/about" element={<About bgcolor="#B15EFF" />} />
-        <Route path="/projects" element={<Projects bgcolor='#FFFB73' />} />
-        <Route path="/skills" element={<Skills bgcolor='#FFA33C'/>} />
+        <Route path="/projects" element={<Projects bgcolor='#BF3131' />} />
+        <Route path="/skills" element={<Skills bgcolor='#65B741'/>} />
         <Route path="/blog" element={<Massonary bgcolor='#3D30A2'/>} />
         <Route path="/contact" element={<ContactMeCard bgcolor='#B15EFF' />} />
       </Routes>

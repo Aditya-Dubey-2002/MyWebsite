@@ -25,7 +25,7 @@ function ContactMeCard(props) {
         <Paper style={mainBx} elevation={5}>
             <DrawerAppBar bgcolor={props.bgcolor} />
             
-            <StartPage/>
+            <StartPage first="Let's Connect" second="Reach out for collaborations, opportunities, or just a tech chat. Excited to hear from you!"/>
             <hr />
             <ContactForm />
         </Paper>

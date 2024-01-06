@@ -13,17 +13,17 @@ function MasonCard(props) {
         padding: "3%",
         display: "flex",
         flexDirection: 'column',
-        minHeight: "46%",
+        minHeight: "43vh",
         position: "relative",
         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-        transition: "box-shadow 0.3s ease-out", 
+        transition: "box-shadow 0.3s ease-out",
         // Added to make absolute positioning work
     };
 
 
     const titleStyle = {
         fontSize: "1.25em",
-        
+
         // maxHeight:"100%"
     }
 
@@ -33,7 +33,7 @@ function MasonCard(props) {
         left: '5px',
         transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease", // Add transform and background-color
         margin: 0,
-        width:"50%"
+        width: "50%"
         // textShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)'
     };
 
@@ -41,7 +41,11 @@ function MasonCard(props) {
         textDecoration: 'none',
         color: props.color,
         minHeight: "50%",
-        maxWidth: "40%"
+        maxWidth: "40%",
+        display: "flex",
+        flexDirection: "row",
+        justifyItems: "space-around"
+
     };
 
     const videoStyle = {
@@ -54,6 +58,11 @@ function MasonCard(props) {
         zIndex: -1, // Place the video behind the content
     };
 
+    const imgStyle = {
+        // width:"20%"
+        left: "40%"
+    }
+
     const [title, setTitle] = useState("");
     const [hint, setHint] = useState(props.hint);
 
@@ -62,7 +71,7 @@ function MasonCard(props) {
         setHint("View");
         e.currentTarget.classList.add("hovered");
     }
-    
+
     function itsOut(e) {
         setTitle("");
         setHint(props.hint);
@@ -72,8 +81,8 @@ function MasonCard(props) {
 
     return (
         <paper elevation={20} style={myStyle} onMouseOver={itsOver} onMouseOut={itsOut}>
+            {/* <img src={props.isrc} className="imgStyle" height={150} width={300}></img> */}
             <NavLink to={props.path} style={LinkStyle}>
-                 
                 {props.component}
                 <div style={textContainerStyle} >
                     <h4 style={titleStyle} className="heading">{props.title}</h4>
@@ -81,11 +90,11 @@ function MasonCard(props) {
                     <hr />
                     <p className="subheading">{hint}</p>
                 </div>
+
             </NavLink>
             {/* Your existing component or image */}
             {/* <img src={props.imgsrc} style={imgStyle}></img> */}
         </paper>
-
     );
 }
 
