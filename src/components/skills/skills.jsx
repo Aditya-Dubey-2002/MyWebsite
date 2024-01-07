@@ -25,11 +25,18 @@ function Skills(props) {
             <YourNavBar />
             <StartPage first="A tech maestro," second=" proficient in C++, HTML/CSS, JavaScript, React, competitive programming, DSA, and web development, shaping innovative solutions with a dash of creativity. Scroll to know more"/>
             <hr />
-            <h2>
+            <div className="sub-page">
+            <h2 className="page-heading">
                 Technical Skills
             </h2>
             <IconLabelTabs/>
-
+            </div>
+            <hr/>
+            <div className="sub-page">
+            <h2 className="page-heading">
+                Competitive Programming
+            </h2>
+            </div>
         </Paper>
         <Footer />
     </div>)

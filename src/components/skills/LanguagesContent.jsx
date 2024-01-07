@@ -7,12 +7,27 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import skillsData from './Data';
+import StarHalfIcon from '@mui/icons-material/StarHalf';
+import StarIcon from '@mui/icons-material/Star';
+import { Star } from '@mui/icons-material';
+import Rating from './Rating';
 
 export default function BasicTable(props) {
     const data = skillsData[(props.index)].skills;
     const tableContainerStyle = {
         color:"white"
     }
+    // const rating = (value)=> {
+    //   let component = <Star/>
+    //   while(value--){
+    //     component+=<Star/>;
+    //   }
+    //   console.log(component);
+    //   return (<>
+    //     {component}
+    //   </>
+    //   )
+    // }
   return (
     <TableContainer component={Paper} >
       <Table sx={{ }} aria-label="simple table">
@@ -25,7 +40,7 @@ export default function BasicTable(props) {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.proficiency}</TableCell>
+              <TableCell align="right"><Rating stars={row.proficiency}/></TableCell>
             </TableRow>
           ))}
         </TableBody>

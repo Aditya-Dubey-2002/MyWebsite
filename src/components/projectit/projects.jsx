@@ -3,14 +3,37 @@ import Footer from "../Footer";
 import YourNavBar from "../nav-bar";
 import { Paper } from "@mui/material";
 import StartPage from "../StartPage";
-import ScrollItem from "../scroll-item";
+import ScrollItem from "../scrollItems/scroll-item";
+import './projects.css'
 
 
 
 function Projects(props) {
-    const projectData = [
+    const workExperienceData = [
         {
             side: "left",
+            heading: "Front-End Developer",
+            subheading: "SellerSetu Pvt. Ltd.",
+            brief: "Utilized React for enhancing user experience and feature additions, bug fixes. Elevated UI/UX through user-centric design.",
+            responsibility: "Collaborated closely with cross-functional teams, contributing to innovative solutions and meeting project goals.",
+            tech: "Technologies: React.js, HTML/CSS, JavaScript, Bootstrap",
+            link: "LinkedIn Profile" // Replace with the actual link if available
+        },
+        {
+            side: "left",
+            heading: "Web Developer",
+            subheading: "Department of Chemical Engineering",
+            brief: "Led the development and maintenance of a fully responsive website for the prestigious N0ET-22 Conference.",
+            responsibility: "Successfully managed the site for posting vital updates and information related to the conference, ensuring seamless communication with attendees.",
+            tech: "Tech Stack: React, HTML, CSS, JavaScript, Bootstrap",
+            link: "LinkedIn Profile" // Replace with the actual link if available
+        },
+        // Add more work experience entries as needed
+    ];
+    
+    const projectData = [
+        {
+            side: "right",
             heading: "MySpace",
             subheading: "Connect,Share and Manage Yourself",
             brief: "MySpace is a personalized website for tracking daily activities, featuring personal blogs and a comprehensive to-do list. It emphasizes user engagement and privacy.",
@@ -43,18 +66,21 @@ function Projects(props) {
     return (<div>
         <Paper elevation={5} style={mainBx}>
             <YourNavBar bgcolor={props.bgcolor} />
-            <StartPage first="Discover my tech journey through projects" second="—where innovation meets code, turning ideas into impactful solutions" />
+            <StartPage first="Explore my journey," second="through impactful projects and enriching work experiences, where passion meets proficiency in every endeavor." />
             <hr />
-            <h2>Projects</h2>
-            <p>Very imp to go through</p>
-            {/* {cardData.map((card, index) => (
-                <MasonCard key={index} {...card} />
-            ))} */}
-            {projectData.map((project, key) => (
-                <ScrollItem index={key} {...project} />
-            ))}
-            {/* <ScrollItem side='left' heading="MySpace" subheading="Connect,Share and Manage Yourself" brief />
-            <ScrollItem side='right' heading="What's the Weather?" subheading="Know the if you need an Umbrella or Sunglasses" brief /> */}
+            <div className="sub-page">
+                <h2 className="page-heading">Work Experience</h2>
+                {workExperienceData.map((project, key) => (
+                    <ScrollItem index={key} {...project} />
+                ))}
+            </div>
+            <hr />
+            <div >
+            <h2 className="page-heading">Personal Projects</h2>
+                {projectData.map((project, key) => (
+                    <ScrollItem index={key} {...project} />
+                ))}
+            </div>
         </Paper>
         <Footer />
     </div>)

@@ -19,7 +19,7 @@ const YourNavBar = (props) => {
   }
   return (
     <div className="navbar-container" style={myStyle}>
-      <SmallIntro />
+      {/* <SmallIntro /> */}
       <nav className="navbar">
         {items.map((item, index) => (
           <NavLink key={index} to={item.path} className="navitem">

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Grid, Paper, TextField, Button, Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 import msgs from "../msgs.js";
 
 
 const ContactForm = () => {
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // Add your form submission logic here
     const msg = {
       Name : e.target.Name.value,
@@ -13,8 +14,14 @@ const ContactForm = () => {
       Number :e.target.Number.value,
       Message : e.target.Message.value
     }
-    msgs.push(msg);
+    // location.reload();
+    
   };
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/`; 
+    navigate(path);
+  }
 
   return (
     <Grid container justifyContent="center" alignItems="center" style={{ minHeight: '100vh' }}>
@@ -23,7 +30,7 @@ const ContactForm = () => {
           <Typography variant="h5" gutterBottom>
             Contact Me
           </Typography>
-          <form onSubmit={handleSubmit} target='_blank' action="https://formsubmit.co/dubey02.adity@gmail.com" method="POST">
+          <form target="_blank" action="https://formsubmit.co/dubey02.adity@gmail.com" method="POST" onSubmit={routeChange}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -36,10 +43,10 @@ const ContactForm = () => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  label="Email"
+                  label="Email (Optional)"
                   variant="outlined"
                   fullWidth
-                  required
+                  // required 
                   type="email"
                   name='Email'
                 />
@@ -66,7 +73,7 @@ const ContactForm = () => {
                 />
               </Grid>
               <Grid item xs={12}>
-                <Button type="submit" variant="contained" color="secondary">
+                <Button type="submit" variant="contained" color="secondary" >
                   Submit
                 </Button>
               </Grid>

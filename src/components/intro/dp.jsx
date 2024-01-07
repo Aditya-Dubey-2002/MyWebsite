@@ -6,7 +6,7 @@ function Dp(props) {
     console.log(props.size);
     const sizes = { width: (props.size), height: (props.size) };
     return (
-        <div className="dp">
+        <div className="dp ">
             <Avatar alt="Aditya Dubey" src={img} sx={sizes} className="avatar" />
         </div>
     )

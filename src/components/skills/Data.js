@@ -2,19 +2,19 @@ const skillsData = [
     {
       category: 'Programming Languages',
       skills: [
-        { name: 'C++', proficiency: 4 },
-        { name: 'Python', proficiency: 4 },
-        { name: 'Java', proficiency: 3 },
+        { name: 'C++', proficiency: 5 },
+        { name: 'Python', proficiency: 3 },
+        { name: 'Java', proficiency: 1 },
         { name: 'JavaScript', proficiency: 4 },
       ],
     },
     {
       category: 'Web Development',
       skills: [
-        { name: 'HTML/CSS', proficiency: 4 },
-        { name: 'React.js', proficiency: 4 },
-        { name: 'Node.js', proficiency: 3 },
-        { name: 'Express.js', proficiency: 3 },
+        { name: 'HTML/CSS', proficiency: 5 },
+        { name: 'React.js', proficiency: 5 },
+        { name: 'Node.js', proficiency: 4 },
+        { name: 'Express.js', proficiency: 4 },
         { name: 'Django', proficiency: 2 },
         { name: 'Flask', proficiency: 2 },
       ],
@@ -22,16 +22,16 @@ const skillsData = [
     {
       category: 'Database Management',
       skills: [
-        { name: 'SQL', proficiency: 4 },
-        { name: 'MongoDB', proficiency: 3 },
+        { name: 'SQL', proficiency: 5 },
+        { name: 'MongoDB', proficiency: 4 },
       ],
     },
     {
         category: 'Tools and Frameworks',
         skills: [
-          { name: 'Bootstrap', proficiency: 3 },
+          { name: 'Bootstrap', proficiency: 4 },
           { name: 'Redux (state management)', proficiency: 3 },
-          { name: 'Responsive Design', proficiency: 4 },
+          { name: 'Responsive Design', proficiency: 5 },
           { name: 'Git', proficiency: 4 },
           { name: 'GitHub', proficiency: 4 },
         ],

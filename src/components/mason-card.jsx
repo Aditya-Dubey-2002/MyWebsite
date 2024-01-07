@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./mason-card.css";
+import { Paper } from "@mui/material";
 
 
 function MasonCard(props) {
@@ -13,7 +14,7 @@ function MasonCard(props) {
         padding: "3%",
         display: "flex",
         flexDirection: 'column',
-        minHeight: "43vh",
+        minHeight: "40vh",
         position: "relative",
         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         transition: "box-shadow 0.3s ease-out",
@@ -33,7 +34,8 @@ function MasonCard(props) {
         left: '5px',
         transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease", // Add transform and background-color
         margin: 0,
-        width: "50%"
+        maxWidth: "50%",
+
         // textShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)'
     };
 
@@ -65,36 +67,45 @@ function MasonCard(props) {
 
     const [title, setTitle] = useState("");
     const [hint, setHint] = useState(props.hint);
+    const [over, setOver] = useState(false);
 
     function itsOver(e) {
         setTitle(props.etitle);
-        setHint("View");
+        setHint(props.hint ? "View" : "");
+        setOver(true);
         e.currentTarget.classList.add("hovered");
     }
 
     function itsOut(e) {
         setTitle("");
+        setOver(false);
         setHint(props.hint);
         e.currentTarget.classList.remove("hovered");
     }
 
+    function handleClick() {
+        
+    }
+
 
     return (
-        <paper elevation={20} style={myStyle} onMouseOver={itsOver} onMouseOut={itsOut}>
-            {/* <img src={props.isrc} className="imgStyle" height={150} width={300}></img> */}
-            <NavLink to={props.path} style={LinkStyle}>
-                {props.component}
-                <div style={textContainerStyle} >
-                    <h4 style={titleStyle} className="heading">{props.title}</h4>
-                    <h2 className="ehead"><b>{title}</b></h2>
-                    <hr />
-                    <p className="subheading">{hint}</p>
-                </div>
+        <Paper elevation={20} style={myStyle} onMouseOver={itsOver} onMouseOut={itsOut} onClick={handleClick} >
+            {/* <div className="for-image"> */}
+                {/* <img src={props.isrc} className="img-style" ></img> */}
+                <NavLink to={props.path} style={LinkStyle} >
+                    {props.component}
+                    <div style={textContainerStyle} >
+                        <h4 style={titleStyle} className="heading">{props.title}</h4>
+                        <h2 className={over ? "ehead mason-text-container-hovered" : "ehead"}><b>{title}</b></h2>
+                        <hr />
+                        <p className="subheading">{hint}</p>
+                    </div>
 
-            </NavLink>
+                </NavLink>
+            {/* </div> */}
             {/* Your existing component or image */}
             {/* <img src={props.imgsrc} style={imgStyle}></img> */}
-        </paper>
+        </Paper>
     );
 }
 

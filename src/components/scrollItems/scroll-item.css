@@ -1,0 +1,8 @@
+.scroll-text-container {
+    transition: opacity 1s ease; /* Add a smooth transition for the opacity property */
+  }
+  
+  .scroll-text-container.hidden {
+    opacity: 0;
+  }
+  

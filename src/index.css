@@ -2,3 +2,6 @@ html{
     background-color: rgb(255, 206, 206);
     /* font-size: 1.1em; */
 }
+.sub-page{
+    min-height:95vh
+  }

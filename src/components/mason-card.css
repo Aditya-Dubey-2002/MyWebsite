@@ -12,6 +12,8 @@ paper.hovered {
     font-family: 'Poppins', sans-serif;
     font-size: 2.25em;
     margin: 0;
+    opacity:0;
+    transition: opacity 0.8s;
     /* font-size: ; */
 }
 #video{
@@ -19,3 +21,12 @@ paper.hovered {
     z-index: -1;
     position: absolute;
 }
+.mason-text-container-hovered{
+    opacity:1;
+}
+.img-style{
+    z-index: -1;
+    max-width: 50%;
+    max-height: 50%;
+}
+

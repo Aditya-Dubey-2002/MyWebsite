@@ -26,7 +26,8 @@ export default function IconLabelTabs() {
 
   return (
     <div >
-      <Tabs value={value} onChange={handleChange} style={{alignItems:'center'}} aria-label="icon label tabs example">
+      <Tabs variant="scrollable"
+  scrollButtons="auto" value={value} onChange={handleChange} color="secondary" style={{alignItems:'center'}} aria-label="icon label tabs example">
         <Tab icon={<LanguageIcon />} label="LANGUAGES" />
         <Tab icon={<WebIcon />} label="WEB DEVELOPMENT" />
         <Tab icon={<StorageIcon />} label="DATABASES" />

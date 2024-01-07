@@ -32,8 +32,8 @@ function App() {
         <Route path="/about" element={<About bgcolor="#B15EFF" />} />
         <Route path="/projects" element={<Projects bgcolor='#BF3131' />} />
         <Route path="/skills" element={<Skills bgcolor='#65B741'/>} />
-        <Route path="/blog" element={<Massonary bgcolor='#3D30A2'/>} />
-        <Route path="/contact" element={<ContactMeCard bgcolor='#B15EFF' />} />
+        <Route path="/blog" element={<Massonary bgcolor='#F99417'/>} />
+        <Route path="/contact" element={<ContactMeCard bgcolor='#DA0C81' />} />
       </Routes>
     </Router>
   );

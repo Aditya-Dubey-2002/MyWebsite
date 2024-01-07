@@ -8,7 +8,7 @@ import StartPage from "../StartPage";
 
 function ContactMeCard(props) {
     const mainBx = {
-        backgroundColor: '#B15EFF',
+        backgroundColor: props.bgcolor,
         margin: "2.5%",
         color: "white",
         padding: "1.5%",
@@ -25,7 +25,7 @@ function ContactMeCard(props) {
         <Paper style={mainBx} elevation={5}>
             <DrawerAppBar bgcolor={props.bgcolor} />
             
-            <StartPage first="Let's Connect" second="Reach out for collaborations, opportunities, or just a tech chat. Excited to hear from you!"/>
+            <StartPage first="Let's Connect!" second="Reach out for collaborations, opportunities, or just a tech chat. Excited to hear from you!"/>
             <hr />
             <ContactForm />
         </Paper>
