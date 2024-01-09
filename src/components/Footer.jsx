@@ -5,11 +5,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub'; // Add this import
 import SmallIntro from './small-intro';
 
 const Footer = () => {
     return (
-        <div elevation={1} style={{ padding: '20px',  }}>
+        <div elevation={1} style={{ padding: '20px', }}>
             <Grid container spacing={2} justifyContent="center" alignItems="center">
                 {/* <SmallIntro /> */}
                 <Grid item>
@@ -22,6 +23,12 @@ const Footer = () => {
                     <IconButton href="https://www.linkedin.com/in/aditya-dubey-7263b7200/" target="_blank" rel="noopener noreferrer" disableRipple>
                         <LinkedInIcon />
                         <Typography variant="body2">aditya-dubey-7263b7200</Typography>
+                    </IconButton>
+                </Grid>
+                <Grid item>
+                    <IconButton href="https://github.com/Aditya-Dubey-2002" target="_blank" rel="noopener noreferrer" disableRipple>
+                        <GitHubIcon />
+                        <Typography variant="body2">Aditya-Dubey-2002</Typography>
                     </IconButton>
                 </Grid>
                 <Grid item>
@@ -42,6 +49,7 @@ const Footer = () => {
                         <Typography variant="body2">_adityadubey02</Typography>
                     </IconButton>
                 </Grid>
+                
             </Grid>
         </div>
     );

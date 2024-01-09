@@ -39,7 +39,7 @@ function About(props) {
     }
     return (
         <>
-            <Paper elevation={5} style={mainBx}>
+            <Paper elevation={5} style={mainBx} className="mnbx">
                 <DrawerAppBar bgcolor={props.bgcolor} />
                 <AboutBody className="a-body" />
             </Paper>

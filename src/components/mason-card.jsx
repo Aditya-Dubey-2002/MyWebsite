@@ -32,7 +32,7 @@ function MasonCard(props) {
         position: 'absolute',
         bottom: '5px',
         left: '5px',
-        transition: "opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease", // Add transform and background-color
+        // transition: "opacity height 0.5s ease, transform 0.5s ease, background-color 0.5s ease", // Add transform and background-color
         margin: 0,
         maxWidth: "50%",
 
@@ -94,7 +94,7 @@ function MasonCard(props) {
                 {/* <img src={props.isrc} className="img-style" ></img> */}
                 <NavLink to={props.path} style={LinkStyle} >
                     {props.component}
-                    <div style={textContainerStyle} >
+                    <div style={textContainerStyle}  >
                         <h4 style={titleStyle} className="heading">{props.title}</h4>
                         <h2 className={over ? "ehead mason-text-container-hovered" : "ehead"}><b>{title}</b></h2>
                         <hr />

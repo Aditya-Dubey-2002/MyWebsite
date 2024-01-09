@@ -1,4 +1,5 @@
 import React from 'react';
+import useWindowDimensions from './useWindowsDimensions';
 import { NavLink } from 'react-router-dom';
 import SmallIntro from './small-intro';
 import { Home, Info, Work, Build, MenuBook, MailOutline } from '@mui/icons-material'; // Import icons
@@ -17,9 +18,11 @@ const YourNavBar = (props) => {
   const myStyle = {
     backgroundColor : props.bgcolor
   }
+  const { height, width } = useWindowDimensions();
+  const miniIntro = width>700?<SmallIntro />:<></>;
   return (
     <div className="navbar-container" style={myStyle}>
-      {/* <SmallIntro /> */}
+      {miniIntro}
       <nav className="navbar">
         {items.map((item, index) => (
           <NavLink key={index} to={item.path} className="navitem">
